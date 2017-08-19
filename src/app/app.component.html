@@ -1,0 +1,39 @@
+<div fxLayout="column" fxFlex>
+
+    <md-toolbar color="primary">
+        <button md-icon-button style="font-size: 20px;" [mdMenuTriggerFor]="menuRef"><md-icon>menu</md-icon>Menus</button>
+        <span style="padding-left: 100px;"></span>
+
+        <md-icon class="md-18">child_care</md-icon>
+        <span style="padding-left: 7px;">Pet Shop Inc.,</span>
+
+
+        <span fxFlex></span>
+
+        <button md-icon-button [mdMenuTriggerFor]="leftMenu"><md-icon>more_vert</md-icon></button>
+    </md-toolbar>
+
+
+    <md-menu #menuRef="mdMenu" yPosition="below" [overlapTrigger]="false">
+        <button md-menu-item>
+            <md-icon>power_settings_new</md-icon>Help
+        </button>
+        <button md-menu-item>
+                <md-icon>info</md-icon>About
+            </button>
+    </md-menu>
+
+    <md-menu #leftMenu="mdMenu" yPosition="below" [overlapTrigger]="false">
+        <button md-menu-item>
+                    <md-icon>send</md-icon>Sign Out
+            </button>
+    </md-menu>
+
+    <router-outlet></router-outlet>
+</div>
+
+<div mdTooltip="Self Register Link!">
+    <button md-fab color="primary" class="fab-bottom-right" (click)="openDialog()">
+        <md-icon>add</md-icon>
+      </button>
+</div>

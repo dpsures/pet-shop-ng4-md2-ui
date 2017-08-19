@@ -1,0 +1,32 @@
+<form class="reg-form">
+  <md-input-container>
+    <input mdInput placeholder="First Name">
+  </md-input-container>
+
+  <md-input-container>
+    <input mdInput placeholder="Last Name">
+  </md-input-container>
+
+  <md-input-container>
+    <input mdInput placeholder="Mobile">
+  </md-input-container>
+
+  <md-input-container>
+    <input mdInput placeholder="Email">
+  </md-input-container>
+
+  <label>Male</label>
+  <md-slide-toggle color="primary"></md-slide-toggle>
+
+  <md-input-container>
+    <input mdInput placeholder="State" [formControl]="stateCtrl" [mdAutocomplete]="auto">
+  </md-input-container>
+
+  <md-autocomplete #auto="mdAutocomplete">
+    <md-option *ngFor="let state of filteredStates | async" [value]="state">
+      {{ state }}
+    </md-option>
+  </md-autocomplete>
+
+  <button md-raised-button color="primary">Register</button>
+</form>
