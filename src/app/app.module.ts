@@ -11,14 +11,16 @@ import { AppRoutingModule } from "./app.routing";
 import { AppComponent } from './app.component';
 import { RegistrationDialogComponent } from './registration-dialog/registration-dialog.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { PetsDetailsSnackbarComponent } from './pets-details-snackbar/pets-details-snackbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistrationDialogComponent,
-    DashboardComponent
+    DashboardComponent,
+    PetsDetailsSnackbarComponent
   ],
-  entryComponents : [RegistrationDialogComponent],
+  entryComponents : [RegistrationDialogComponent, PetsDetailsSnackbarComponent],
   imports: [
     BrowserModule,BrowserAnimationsModule,MaterialModule,FlexLayoutModule,AppRoutingModule,FormsModule,ReactiveFormsModule
   ],

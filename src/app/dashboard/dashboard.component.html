@@ -1,0 +1,9 @@
+<md-grid-list cols="5" rowHeight="200px">
+    <md-grid-tile *ngFor="let pet of pets" [rowspan]="pet.rows">
+        <img src="assets/imgs/{{pet.img}}" alt="photo of {{pet.name}}">
+        <md-grid-tile-footer>
+            <h3 md-line>{{pet.name}}</h3>
+            <button md-icon-button (click)="showDetails(pet)"><md-icon>info</md-icon></button>
+        </md-grid-tile-footer>
+    </md-grid-tile>
+</md-grid-list>
