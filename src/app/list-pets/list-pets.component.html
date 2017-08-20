@@ -1,0 +1,8 @@
+<md-card>
+    <md-nav-list>
+        <md-list-item *ngFor="let user of users" (click)="selectedUser = user">
+          <md-icon svgIcon="assets/avatars:{{user.avatar}}" class="avatar"></md-icon>
+          <span>{{user.name}}</span>
+        </md-list-item>
+      </md-nav-list>
+</md-card>
